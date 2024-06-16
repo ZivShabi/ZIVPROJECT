@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;600;700;900&display=swap');
+
+:root {
+    --bg: #000000ed;
+}
+
+.d h1 {
+    font-size: 4em;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    max-width: 900px;
+    min-height: 300px;
+    background-color: white;
+    margin: 100px auto;
+    justify-content: center;
+    padding-bottom: 10%;
+    box-shadow: 0.5px 0.5px 2px 4px #ffffff;
+    border: 3px solid black;
+    border-radius: 4px;
+}
+
+
+.flex .column {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    margin: 1em auto;
+    border-radius: 8px;
+    background-color: #866009;
+    color: rgb(63, 63, 63);
+    filter: brightness(2);
+    padding: 16px 16px;
+    min-height: 400px;
+    border: 3px solid black;
+    line-height: 2;
+}
+
+
+
+.column h2 {
+    font-size: 18px;
+    font-weight: normal;
+    padding: 12px 0;
+    margin: 0px;
+    font-weight: 700;
+    font-size: 2em;
+    max-width: content;
+    color: black;
+}
+
+#startButton {
+    width: 200px;
+    margin: 10% 35%;
+
+}
+
+button {
+    background-color: rgb(167, 172, 166);
+    color: var(--bg);
+    padding: 6px 12px;
+    font-weight: 700;
+    font-size: 1em;
+    border-radius: 8px;
+    border: none;
+}
+
+button:hover {
+    filter: brightness(1.2);
+    background-color: dimgray;
+}
+
+.ltr {
+    direction: ltr;
+    display: inline-block;
+}
+
+.result {
+    color: rgb(119, 228, 195);
+    font-size: 1em;
+    font-weight: 900;
+    padding: 12px 16px;
+    margin-top: 16px;
+}
+
+#container {
+    direction: rtl;
+    font-family: 'Rubik', sans-serif;
+    background-color: rgb(25, 41, 58);
+    width: 100%;
+    margin: 0 auto;
+    max-width: 900px;
+    min-height: 300px;
+}
+
+
+
+#stopwatch {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+ol li {
+    cursor: pointer;
+    box-shadow: 0.8px 0.8px 0px px white;
+    border-bottom: 2px solid white;
+}

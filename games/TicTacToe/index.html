@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/TicTacToe.css">
+    <link rel="stylesheet" href="">
+    <script src="./js/TicTacToe.js" defer></script>
+    <title>TicTacToe</title>
+</head>
+
+<body>
+    <div id="welcome-screen">
+        <h1>ברוכים הבאים למשחק איקס עיגול</h1>
+        <h1>תבחר עם מי תרצה לשחק</h1>
+
+        <button id="start-button">התחל משחק</button>
+        <br><br>
+        <label for="computerMode">ניתן לסמן ☑️ בתוך הריבוע הלבן כדי לשחק נגד המחשב</label>
+        <p>ניתן להקליד שמות לפני שמתחילים </p>
+    </div>
+
+    <div class="container">
+
+        <div id="players">
+            <div class="currentTurn">
+                <input type="text" id="playerNameX">
+                <h2 id="playerXName">X</h2>
+                <p>ניקוד: <span id="xScoreDisplay">0</span></p>
+            </div>
+
+            <div class="currentTurn">
+                <input type="text" id="playerNameO">
+                <h2 id="playerOName">O</h2>
+                <p>ניקוד: <span id="oScoreDisplay">0</span></p>
+            </div>
+        </div>
+        <div class="buttonBoard">
+            <button id="playAgain" onclick="newGame()">שחק שוב</button>
+            <button id="resetGame" onclick="resetGame()">איפוס משחק</button>
+        </div>
+        <div id="playerSelection">
+            <input type="checkbox" id="computerMode" onchange="toggleComputerMode()">
+            <button onclick="startGame()">התחל משחק </button>
+        </div>
+
+
+        <div class="TicTacToe">
+            <div class="btn"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+        </div>
+        <div id="message"></div>
+    </div>
+
+    <div id="confetti">
+        <div class="content">
+            <div id="confettiText"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
