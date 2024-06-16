@@ -319,8 +319,9 @@ footer .textFooter {
         text-align: center;
         background-color: black;
         display: flex;
-        margin: 6em auto;
+        margin: 8em auto;
         padding: 0.5em;
+
     }
 
     aside img {
