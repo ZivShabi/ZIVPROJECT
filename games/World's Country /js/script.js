@@ -93,12 +93,22 @@ const createCard = (country) => {
     cards.appendChild(card);
 }
 
-const createCardsList = (list) => {
-    cards.innerHTML = '';
-    list.forEach((item) => {
-        createCard(item);
-    });
-}
+searchInput.addEventListener('keyup', (e) => {
+    const searchTerm = e.target.value;
+    if (searchTerm) {
+        search(searchTerm);
+        if (countries.length > 0) {
+            cards.innerHTML = '';
+            createCardsList(countries); // קריאה לפונקציה שכבר מוגדרת
+        } else {
+            cards.innerHTML = '<p>No results found.</p>';
+        }
+    } else {
+        reset();
+        cards.innerHTML = '';
+        createCardsList(countries); // קריאה לפונקציה שכבר מוגדרת
+    }
+});
 
 
 createCardsList(countries);
