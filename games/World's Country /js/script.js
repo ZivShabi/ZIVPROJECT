@@ -1,11 +1,9 @@
-import { countries } from "./services/countriesService.js";
-import { createCardsList } from "./services/storageService.js";
-
-
+import { countries, search, reset } from "./services/countriesService.js";
+import { likedCountries, updateData, getData } from "./services/storageService.js";
 
 const cards = document.getElementById('cards');
 const searchInput = document.getElementById('search');
-let likedCountriesList = [];
+let likedCountriesList = likedCountries;
 
 searchInput.addEventListener('keyup', (e) => {
     const searchTerm = e.target.value;
@@ -92,3 +90,13 @@ const createCard = (country) => {
 
     cards.appendChild(card);
 }
+
+const createCardsList = (list) => {
+    cards.innerHTML = '';
+    list.forEach((item) => {
+        createCard(item);
+    });
+}
+
+createCardsList(countries);
+getData();

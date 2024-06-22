@@ -12,8 +12,7 @@ const getData = () => {
 const updateData = (countryName) => {
     if (likedCountries.includes(countryName)) {
         likedCountries = likedCountries.filter((item) => item !== countryName);
-    }
-    else {
+    } else {
         likedCountries.push(countryName);
     }
     localStorage.setItem('favouriteCountries', JSON.stringify(likedCountries));
